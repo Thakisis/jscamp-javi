@@ -1,7 +1,7 @@
 const filters = {}
 const filtersContainer = document.getElementById('filters-container');
 
-filtersContainer.addEventListener('click', (event) => {
+filtersContainer.addEventListener('change', (event) => {
     const select = event.target.closest('select');
     const name = select?.name;
 
@@ -25,5 +25,4 @@ function renderfilters(filters) {
 
         offer.style.display = isMatch ? 'block' : 'none';
     });
-
 }
