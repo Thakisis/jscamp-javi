@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles de la oferta</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/detalles.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <svg
+          class="h-8 w-8"
+          fill="currentColor"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+        <h1>DevJobs</h1>
+      </div>
+      <nav class="navbar-menu">
+        <a href="index.html" class="navbar-menu-item">Inicio</a>
+        <a href="#" class="navbar-menu-item active">Empleos</a>
+        <a href="#" class="navbar-menu-item">Empresas</a>
+        <a href="#" class="navbar-menu-item">Salarios</a>
+      </nav>
+      <div class="navbar-end">
+        <form class="search-box">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Buscar"
+            required
+          />
+          <!-- <button type="submit">Buscar</button> -->
+        </form>
+        <button class="btn-secondary">Subir CV</button>
+        <!-- Fix this line in detalles.html -->
+        <img
+          src="https://avatars.githubusercontent.com/u/102880137?v=4"
+          alt="User profile"
+        />
+      </div>
+    </header>
+
+    <main class="main-container">
+      <nav class="breadcrumb">
+        <ol>
+          <li><a href="#" class="breadcrumb-item">Inicio</a></li>
+          <li>
+            <a href="#" class="breadcrumb-item active">Software Developer </a>
+          </li>
+        </ol>
+      </nav>
+
+      <section class="job-card">
+        <article class="job-card-header">
+          <div class="job-card-header-info">
+            <h2 class="job-title">Software Developer Senior</h2>
+            <small> Tech Solutions Inc. | Remoto</small>
+            <span class="tag"> Full Stack</span>
+          </div>
+          <button class="button-apply-job">Aplicar ahora</button>
+        </article>
+        <article class="job-description">
+          <h3>Descripción del puesto</h3>
+          <p>
+            Tech Solutions Inc. está buscando un Ingeniero de Software Senior
+            altamente motivado y experimentado para unirse a nuestro equipo
+            remoto. EI candidato ideal tendrá una sólida formación en desarrollo
+            de software, con experiencia en eI diseño, desarrollo e
+            implementación de soluciones de software escalables y de alto
+            rendimiento. Como Ingeniero de Software Senior, usted será
+            responsable de liderar proyectos de desarrollo, mentorizar a
+            ingenieros junior y colaborar con equipos multifuncionales para
+            entregar productos de software de alta calidad.
+          </p>
+        </article>
+        <article class="job-duties">
+          <h3>Responsabilidades</h3>
+          <ul>
+            <li>
+              Diseñar y desarrollar soluciones de software escalables y de alto
+              rendimiento.
+            </li>
+            <li>
+              Colaborar con equipos multifuncionales para entregar productos de
+              software de alta calidad.
+            </li>
+            <li>
+              Liderar proyectos de desarrollo, mentorizar a ingenieros junior y
+              colaborar con equipos multifuncionales para entregar productos de
+              software de alta calidad.
+            </li>
+            <li>
+              Participar en la planificación y ejecución de pruebas de software.
+            </li>
+            <li>
+              Realizar revisiones de codigo y proporcionar retroalimentacion
+              constructiva a los miembros del equipo
+            </li>
+          </ul>
+        </article>
+        <article class="job-requirements">
+          <h3>Requisitos</h3>
+          <ul>
+            <li>Licenciatura en informática o campo relacionado.</li>
+            <li>Mínimo de 5 años de experiencia en desarrollo de software</li>
+            <li>
+              Experiencia con frameworks de JavaScript (por ejemplo, React.
+              Angular, Vue.js)
+            </li>
+            <li>
+              Familiaridad con metodologías ágiles y herramientas de control de
+              versiones (Git)
+            </li>
+          </ul>
+        </article>
+        <article class="job-about">
+          <h3>Acerca de la empresa</h3>
+          <p>
+            Tech Solutions Inc. es una empresa global de soluciones tecnológicas
+            que ofrece servicios de desarrollo de software, consultoría y
+            asesoría a clientes en todo el mundo. Nuestro equipo de
+            profesionales altamente calificados está disponible para ayudarle a
+            crear soluciones de software de alta calidad y eficientes.
+          </p>
+        </article>
+
+        <button class="button-apply-job">Aplicar ahora</button>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+    </footer>
+  </body>
+</html>

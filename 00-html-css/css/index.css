@@ -129,7 +129,7 @@ form input[type="text"]::placeholder {
   color: #64748b;
 }
 
-form button[type="submit"] {
+button {
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary);
@@ -143,8 +143,8 @@ form button[type="submit"] {
   white-space: nowrap;
 }
 
-form button[type="submit"]:hover,
-form button[type="submit"]:focus {
+button:hover,
+button:focus {
   background-color: var(--primary-hover);
   outline: 2px solid white;
   outline-offset: 2px;

@@ -1,0 +1,337 @@
+@import "app.css";
+
+/* Resultados de búsqueda  styling*/
+
+/* Header */
+.navbar {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+/* Navbar Brand (Logo + DevJobs) */
+.navbar-brand {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-brand svg {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  color: var(--primary-light);
+}
+
+.navbar-brand h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Navigation Links */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-menu-item {
+  text-decoration: none;
+  color: var(--text-primary);
+
+  &:hover,
+  &:focus {
+    color: var(--text-secondary);
+  }
+
+  &.active {
+    color: var(--primary-light);
+    font-weight: 500;
+    pointer-events: none;
+  }
+}
+/* 
+nav a:nth-child(2) {
+  color: var(--primary-dark);
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  font-weight: 700;
+} */
+
+/* User Actions (Subir CV + Profile Picture) */
+.navbar-end {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-end img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 0.5rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  max-width: 350px;
+  background: var(--input-bg);
+}
+
+.search-input {
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.btn-secondary {
+  background: var(--primary-dark);
+  border: 1px solid var(--border);
+  color: var(--primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+.btn-secondary:hover {
+  background-color: var(--primary-light);
+  color: var(--text-primary);
+  outline: #fff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px; /* More reasonable max-width */
+  margin: 2rem auto;
+  padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+/* Breadcrumb */
+.breadcrumb-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.breadcrumb > ol > li {
+  display: inline;
+  font-size: 0.975rem;
+}
+
+.breadcrumb ol > li::after {
+  content: "/";
+  color: var(--text-muted);
+  padding: 0 0.5rem;
+}
+
+nav > ol > li:is(:last-child)::after {
+  content: none;
+}
+
+.breadcrumb-item.active {
+  color: var(--text-primary);
+}
+
+.job-card {
+  margin: 1.5rem 0; /* Remove fixed horizontal margins */
+  padding: 0 1rem;
+}
+
+.job-card > article {
+  margin-top: 2.2rem;
+}
+
+.job-card-header-info > .job-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.job-card-header-info > small {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+.job-card-header div {
+  flex: 1;
+}
+
+.job-card-header > button {
+  position: static;
+  margin-left: auto;
+}
+.job-card-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.button-apply-job {
+  background: var(--primary-light);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.button-apply-job:hover {
+  background-color: var(--primary-light);
+  color: var(--text-primary);
+  outline: 2px solid white;
+}
+
+.job-description,
+.job-requirements,
+.job-duties,
+.job-about {
+  margin: 2rem 0;
+}
+
+article > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h3 + p {
+  text-wrap: balance;
+  margin-bottom: 2rem;
+}
+
+article > p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+article > ul {
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+article > ul > li {
+  position: relative;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  list-style: none;
+  margin-bottom: 0.5rem;
+  padding-left: 1.8rem; /* espacio para el icono */
+}
+
+article > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url("data:image/svg+xml;utf8,<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='%230874c5'  stroke-width='2'  stroke-linecap='round'  stroke-linejoin='round'  class='icon icon-tabler icons-tabler-outline icon-tabler-circle-check'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0' /><path d='M9 12l2 2l4 -4' /></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section article:last-of-type {
+  border-bottom: 2px solid var(--border);
+}
+
+.job-card > button {
+  position: static;
+  margin: 2rem 0;
+  display: block;
+  margin-left: auto;
+}
+
+/* Add media query for larger screens if needed */
+@media (min-width: 768px) {
+  .job-card {
+    margin: 1.5rem 2rem;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    /* flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; */
+  }
+  .navbar-menu {
+    /* margin-right: 3rem; */
+    /* width: 100%; */
+    /* justify-content: space-between; */
+  }
+  .navbar-brand {
+    /* margin-right: 3rem; */
+  }
+  .navbar-end {
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-left: auto;
+  }
+  /* .navbar-end {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .job-card {
+    margin: 1.5rem 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+  }
+  .breadcrumb > ol > li {
+    align-items: flex-start;
+    margin: 0;
+    color: red !important;
+  }
+
+  .main-container {
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0; /* Add padding for smaller screens */
+  }
+}
