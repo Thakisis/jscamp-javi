@@ -38,7 +38,12 @@ function setParams(name, value) {
     params.set(name, value);
 
     if (!value) params.delete(name);
-    window.history.pushState({}, '', `?${params.toString()}`);
+
+    if (params.size > 0)
+        return window.history.replaceState({}, '', `?${params.toString()}`);
+
+    window.history.replaceState({}, '', window.location.pathname);
+
 }
 
 renderOffers(jobListings);
