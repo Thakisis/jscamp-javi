@@ -1,8 +1,21 @@
 import { offerCard, tagSpan } from './data/html-functions.js';
 
 import jobListings from './data/ofertas.js';
-const filters = {}
+const filters = loadParam();
 const filtersContainer = document.getElementById('filters-container');
+
+
+function loadParam() {
+
+    const paramsObject = Object.fromEntries(new URLSearchParams(location.search))
+    Object.entries(paramsObject).forEach(([key, value]) => {
+        const selectElement = document.querySelector(`select[name="${key}"]`);
+        if (selectElement) selectElement.value = value;
+
+    });
+    console.log(paramsObject);
+    return {}
+}
 
 filtersContainer.addEventListener('change', (event) => {
     const select = event.target.closest('select');
@@ -15,18 +28,30 @@ filtersContainer.addEventListener('change', (event) => {
     console.log(filters);
     renderfilters(filters);
 
+    setParams(name, value);
+
+
 });
+
+
+function setParams(name, value) {
+    const params = new URLSearchParams(window.location.search);
+
+    params.set(name, value);
+
+    if (!value) params.delete(name);
+    window.history.pushState({}, '', `?${params.toString()}`);
+}
+
 renderOffers(jobListings);
 function renderfilters(filters) {
-    const offers = document.querySelectorAll('.job-listing-card');
-
     const jobsfilter = jobListings.filter(job =>
         Object.entries(filters).reduce((match, [key, value]) => {
             const matchValue = job[key].includes(value);
             return match && matchValue;
         }, true)
     )
-    console.log("filters", jobsfilter);
+
 
     renderOffers(jobsfilter);
 }
