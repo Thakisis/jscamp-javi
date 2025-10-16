@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de búsqueda</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <!-- <link rel="stylesheet" href="../00-html-css/css/reset.css"></link> -->
+    <script type="module" src="nuevoscript.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-brand">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 48 48" 
+                xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                    fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+            <h1>DevJobs</h1>
+        </div>
+        <nav class="navbar-menu">
+            <a href="index.html" class="navbar-menu-item">Inicio</a>
+            <a href="#" class="navbar-menu-item active">Empleos</a>
+            <a href="#" class="navbar-menu-item">Empresas</a>
+            <a href="#" class="navbar-menu-item">Salarios</a>
+        </nav>
+        <div class="navbar-end">
+            <button class="btn-secondary">Subir CV</button>
+            <!-- <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeG7G_fClYlNDdKTzEHA670Uh9TsfTwHCNng2nJOHZCsw_jzXKbuYg-ldPUGFyi06-RD8U4HtIew9rpl5T8KZpJLMfjHDm4EzNUz8rmjZK31QJTHhMqTY3_Kb8A2X_2zq_sDsq_v05AiSRHLlDPcyX1NmEoPCfW01ygMJcjz3gb0lUUZO_9qQq67stmy6-p1WbZReGs7T6RvlsxS_vN6KZi9UyUHJ80dTs-NADdsMxt3pXS8dF07JN11dXZAZp-UdqyFt7glf9jmA" alt=""> -->
+            <img src="https://avatars.githubusercontent.com/u/102880137?v=4 alt="">
+        </div>
+    </header>
+
+    <main> 
+        <!-- Barra de búsqueda -->
+        <section>       
+            <h2>Encuentra tu próximo trabajo</h2>
+            <p>Explora miles de ofertas de trabajo para desarrolladores en todo el mundo.</p>
+            <form id="form" role="search">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"    
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                    <input type="text" id="txt-search" placeholder="Buscar trabajos, empresas o habilidades" class="search-field" />
+                    <button type="submit" class="btn-search" id="btn-search">Buscar</button>
+                </div>
+                <div class="filters" id="filters-container">
+                    <select id="filter-technology" name="technology">
+                        <option value="" selected>Tecnología</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="fullstack">Full Stack</option>
+                        <option value="mobile">Mobile</option>
+                    </select>
+
+                    <select id="filter-location" name="location">
+                        <option value="" selected>Ubicación</option>
+                        <option value="remoto">Remoto</option>
+                        <option value="cdmx">Ciudad de México</option>
+                        <option value="gdl">Guadalajara</option>
+                        <option value="mty">Monterrey</option>
+                        <option value="barc">Barcelona</option>
+                        <option value="madrid">Madrid</option>
+                    </select>
+
+                    <select id="filter-contract-type" name="contract">
+                        <option value="" selected>Tipo de contrato</option>
+                        <option value="fulltime">Fulltime</option>
+                        <option value="parttime">Part Time</option>
+                        <option value="contract">Contract</option>
+                        <option value="internship">Pasantía</option>
+                    </select>
+
+                    <select id="filter-experience" name="experience">
+                        <option value="" selected>Nivel de experiencia</option>
+                        <option value="junior">Junior</option>
+                        <option value="mid">Semi-Senior</option>
+                        <option value="senior">Senior</option>
+                    </select>
+
+                    <button id="btn-reset" class="btn-reset">Reset filters</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Resultados de búsqueda -->
+       <section class="jobs-listings">
+
+            <article class="job-listing-card" data-experience="mid" data-contract="fulltime" data-technology="javascript,react,nodejs,fullstack" data-location="remoto"> 
+                <div class="job-listing-content">
+                    <h3>Software Developer Senior</h3>
+                    <small>Tech Solutions Inc. | Remoto</small>
+                    <p>Buscamos un desarrollador senior con experiencia en desarrollo web y conocimientos en JavaScript, React
+                    y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
+                    comunicación.</p>
+                    <span class="tag">Full Stack</span>
+                    <!-- <span class="tag"> Senior</span> -->
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="junior" data-contract="fulltime" data-technology="javascript,react,nodejs,frontend" data-location="remoto">
+                <div class="job-listing-content">
+                <h3>Ingeniero de Software</h3>
+                <small>Tech Solutions Inc. | Remoto</small>
+                <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React
+                    y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
+                    comunicación.</p>
+                    <span class="tag"> Frontend</span>
+                </div>
+                <button class="button-apply-job" >Aplicar</button>
+            </article>
+
+            <article class="job-listing-card" data-experience="mid" data-contract="fulltime" data-technology="sql,python,r,fullstack" data-location="cdmx">
+                <div class="job-listing-content"  >
+                    <h3>Analista de Datos</h3>
+                    <small>Data Driven Co. | Ciudad de México</small> 
+                    <p>Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y
+                        herramientas de visualización. Se requiere conocimiento en SQL, Python y R.</p>
+                    <span class="tag"> Full Stack</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+
+            <article class="job-listing-card" data-experience="junior" data-contract="fulltime" data-technology="swift,kotlin,uiux,mobile" data-location="gdl">
+                <div class="job-listing-content">
+                    <h3>Desarrollador de Aplicaciones Móviles</h3>
+                    <small>Mobile Apps Ltd. | Guadalajara</small> 
+                    <p>Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe
+                        tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.</p>
+                    <span class="tag"> Mobile</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+
+            <article class="job-listing-card" data-experience="senior" data-contract="parttime" data-technology="aws,azure,gcp,backend" data-location="remoto">
+                <div class="job-listing-content">
+                    
+                    <h3>Ingeniero de DevOps</h3>
+                    <small>Cloud Services SA | Remoto</small> 
+                    <p>Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube,
+                        automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure
+                        o GCP.</p>
+                    <span class="tag">Backend</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="junior" data-contract="fulltime" data-technology="uxui,mobile" data-location="cdmx">
+                <div class="job-listing-content">
+                    <h3>Diseñador de Experiencia de Usuario</h3>
+                    <small>Designers Inc. | Ciudad de México</small> 
+                    <p>Buscamos un diseñador de experiencia de usuario con experiencia en el diseño de interfaces de usuario y
+                        experiencias de usuario. Se requiere conocimiento en UX/UI, prototipado y herramientas de diseño.
+                    </p>
+                    <span class="tag">Mobile</span>  
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="senior" data-contract="fulltime" data-technology="frontend" data-location="cdmx">
+                <div class="job-listing-content">
+                    <h3>Arquitecto de Software</h3>
+                    <small>Software Architects Inc. | Ciudad de México</small> 
+                    <p>Buscamos un arquitecto de software con experiencia en diseño de arquitectura de software y arquitectura de
+                        datos. Se requiere conocimiento en diseño de arquitectura de software y arquitectura de datos.</p>
+                    <span class="tag">Frontend</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="junior" data-contract="contract" data-technology="cybersecurity,backend" data-location="barc">
+                <div class="job-listing-content">
+                    <h3>Ingeniero de Seguridad</h3>
+                    <small>Security Inc. | Barcelona</small> 
+                    <p>Buscamos un ingeniero de seguridad con experiencia en seguridad informática y ciberseguridad. Se requiere
+                        conocimiento en seguridad informática y ciberseguridad.</p>
+                    <span class="tag">Backend</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="junior" data-contract="internship" data-technology="networking,frontend" data-location="madrid">
+                <div class="job-listing-content">
+                    <h3>Ingeniero de Redes</h3> 
+                    <small>Network Engineers Inc. | Madrid</small> 
+                    <p>Buscamos un ingeniero de redes con experiencia en diseño de redes y administración de redes. Se requiere
+                        conocimiento en diseño de redes y administración de redes.</p>
+                    <span class="tag">Frontend</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+            <article class="job-listing-card" data-experience="mid" data-contract="parttime"  data-technology="it,fullstack" data-location="madrid">
+                <div class="job-listing-content">
+                    <h3>Ingeniero de Sistemas</h3>
+                    <small>System Engineers Inc. | Madrid</small>
+                    <p>Buscamos un ingeniero de sistemas con experiencia en diseño de sistemas y administración de sistemas. Se
+                        requiere conocimiento en diseño de sistemas y administración de sistemas.</p>
+                    <span class="tag"> Full Stack</span>
+                </div>
+                <button class="button-apply-job">Aplicar</button>
+            </article>
+        </section>      
+
+        <nav class="pagination">
+            <a href="#" ><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg></a>
+            <a href="#" class="is-active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></a>
+        </nav>
+        
+    </main>
+
+    <footer>
+        <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+    </footer>
+</body>
+</html>
