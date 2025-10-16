@@ -13,7 +13,6 @@ function loadParam() {
         if (selectElement) selectElement.value = value;
 
     });
-    console.log(paramsObject);
     return {}
 }
 
@@ -24,19 +23,18 @@ filtersContainer.addEventListener('change', (event) => {
     if (!select || !name) return;
     const value = select.value;
     filters[name] = value;
+
     if (!value) delete filters[name];
-    console.log(filters);
+
     renderfilters(filters);
-
     setParams(name, value);
-
 
 });
 
 
 function setParams(name, value) {
-    const params = new URLSearchParams(window.location.search);
 
+    const params = new URLSearchParams(window.location.search);
     params.set(name, value);
 
     if (!value) params.delete(name);
@@ -44,7 +42,9 @@ function setParams(name, value) {
 }
 
 renderOffers(jobListings);
+
 function renderfilters(filters) {
+
     const jobsfilter = jobListings.filter(job =>
         Object.entries(filters).reduce((match, [key, value]) => {
             const matchValue = job[key].includes(value);
@@ -52,13 +52,14 @@ function renderfilters(filters) {
         }, true)
     )
 
-
     renderOffers(jobsfilter);
 }
 function renderOffers(jobs) {
+
     const jobsContainer = document.getElementById('jobs');
     const nodes = jobs.map(job => renderOffer(job));
     jobsContainer.replaceChildren(...nodes);
+
 }
 
 
@@ -70,6 +71,7 @@ function renderOffer({ tag, technology, ...job }) {
     const tags = technology.map(tagSpan)
     const tagsNode = tags.map(tag => new DOMParser().parseFromString(tag, 'text/html').body.firstChild);
     tagsContainger.append(...tagsNode);
+
     return offerNode;
 
 }
